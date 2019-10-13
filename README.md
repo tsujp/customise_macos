@@ -27,5 +27,5 @@ Too much my friend. A good 6 hours finding which files are in-control of the eff
 ### TODO:
 
 - [ ] Patch for other system themes, as far as I know this will only work in my setup but someone can try it out and let me know.
-- ~~[x] For some reason Firefox doesn't appear to respect this (I think). I'll see if it's just some weird.. caching(?) or something.~~ *Firefox doesn't respect system appearance settings, this is a known defect/bug on macOS.~~
+- [x] ~~For some reason Firefox doesn't appear to respect this (I think). I'll see if it's just some weird.. caching(?) or something.~~ *Firefox doesn't respect system appearance settings, this is a known defect/bug on macOS.~~
 - [x] Check which SIP settings require being turned off.
