@@ -2,11 +2,17 @@
 
 Does what it says on the tin, instead of rounded corners at the top-left, top-right, bottom-left and bottom-right of windows on macOS you can now have pixel-perfect square ones.
 
-![gloriouis-square-edges](https://i.imgur.com/wZv3xFI.png)
+<p align='center'>
+  <img src='https://i.imgur.com/WN5PtxK.png'>
+</p>
 
 ## Yeah but, why?
 
-I wanted the border function from Yabai to look better, and since apps tend to have different border radii my only sane choice was to force them all to have the same amount, that being 0.
+I wanted the border function from Yabai to look better, and since apps tend to have different border radii my only sane choice was to force them all to have the same amount, that being 0. So here's the before and after of that.
+
+BEFORE | AFTER
+:-------------------------:|:-------------------------:
+![default-rounded-edges](https://i.imgur.com/NHfKs15.png) | ![gloriouis-square-edges](https://i.imgur.com/WN5PtxK.png)
 
 ## Okay, how do I use it?
 
