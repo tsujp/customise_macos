@@ -1,7 +1,10 @@
-# Square macOS GUI
+# Custom macOS GUI
 
-Patches for appearance `.car` bundles to make GUI elements have square corners
-instead of rounded ones.
+Patches for appearance `.car` bundles to change the macOS GUI.
+
+## Current patches
+
+-   Square GUI elements (windows, menus, etc)
 
 ```
 TODO: better before and after example
@@ -29,6 +32,26 @@ TODO: better before and after example
 3.  Copy the appropriate (for your theme, light or dark) edited `.car` file into
     `/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/`,
     e.g. for `DarkAquaAppearance` you'd copy `DarkAquaAppearance/Edited/DarkAquaAppearance.car`.
+
+## Compatibility
+
+This file contains version numbers of confirmed working patches. The format is
+quite simple:
+
+-   it contains the macOS release number
+-   if no additional grammar is present, full support is available
+-   if a `~` is present: indicates partial support
+-   if a `?` is present: indicates in progress work
+
+### Example
+
+```
+11.0 ~    <-- version 11.0 is partially supported
+11.0 ?    <-- version 11.0 support is in progress (and none exists currently as
+              there is no `~`)
+11.0 ~?   <-- in progress and partially supported currently
+11.0      <-- this means version 11.0 is completely supported
+```
 
 ## NB
 
