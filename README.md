@@ -40,10 +40,10 @@ TODO: better before and after example
 This file contains version numbers of confirmed working patches. The format is
 quite simple:
 
--   it contains the macOS release number
--   if no additional grammar is present, full support is available
--   if a `~` is present: indicates partial support
--   if a `?` is present: indicates in progress work
+-   It contains the macOS release number
+-   If no additional grammar is present, full support is available
+-   If a `~` is present: indicates partial support
+-   If a `?` is present: indicates in progress work
 
 If you release isn't listed it has no verified support, you could try it anyway
 [as long as you do a backup first](#backup).
