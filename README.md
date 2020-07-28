@@ -25,6 +25,7 @@ TODO: better before and after example
 2.  While there are backup `.car` files in this repo, please backup yours
     locally just in-case. Here's an example of how to do so.
 
+    <a id="backup" />
     ```bash
     rsync -rI /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/ ~/Desktop/saResourcesBackup
     ```
@@ -42,6 +43,9 @@ quite simple:
 -   if no additional grammar is present, full support is available
 -   if a `~` is present: indicates partial support
 -   if a `?` is present: indicates in progress work
+
+If you release isn't listed it has no verified support, you could try it anyway
+[as long as you do a backup first](#backup).
 
 ### Example
 
