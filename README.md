@@ -54,7 +54,7 @@ If your release isn't listed it has no verified support, you could try it anyway
 11.0 ~    <-- version 11.0 is partially supported
 11.0 ?    <-- version 11.0 support is in progress (and none exists currently as
               there is no `~`)
-11.0 ~?   <-- in progress and partially supported currently
+11.0 ?~   <-- in progress and partially supported currently
 11.0      <-- this means version 11.0 is completely supported
 ```
 
