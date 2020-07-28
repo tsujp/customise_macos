@@ -1,4 +1,4 @@
-# Square macOS Windows
+# Square macOS GUI
 
 Patches for appearance `.car` bundles to make GUI elements have square corners
 instead of rounded ones.
