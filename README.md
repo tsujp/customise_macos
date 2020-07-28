@@ -26,6 +26,7 @@ TODO: better before and after example
     locally just in-case. Here's an example of how to do so.
 
     <a id="backup" />
+
     ```bash
     rsync -rI /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/ ~/Desktop/saResourcesBackup
     ```
