@@ -45,7 +45,7 @@ quite simple:
 -   If a `~` is present: indicates partial support
 -   If a `?` is present: indicates in progress work
 
-If you release isn't listed it has no verified support, you could try it anyway
+If your release isn't listed it has no verified support, you could try it anyway
 [as long as you do a backup first](#backup).
 
 ### Example

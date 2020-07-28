@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: detect if SIP set correctly
+# TODO: apply patches
+
 # DOC: prints indented text wrapping at column width or 80, whichever is smaller
 # NB: if people really want wrapped lines on 10 column wide terminals I guess
 #     I can add that later but I'd rather not, effort vs reward et al
