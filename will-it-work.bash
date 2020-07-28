@@ -1,5 +1,4 @@
 #!/bin/bash
-[[ $- = *i* ]] || return
 if [[ "$OSTYPE" == "darwin"* ]]; then
   sw_vers -productVersion
 else
