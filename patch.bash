@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # TODO: detect if SIP set correctly
 # TODO: apply patches
@@ -10,7 +10,7 @@ print_indented ()
 {
   cols=$(tput cols)
   maxcol=$(($cols > 80 ? $cols : 80))
-  printf ":: $1\n" | fold -s -w "$maxcol" | sed -e "2,$ s|^|   |g"
+  printf ">>> $1\n" | fold -s -w "$maxcol" | sed -e "2,$ s|^|   |g"
 }
 
 main ()
