@@ -20,7 +20,7 @@ main ()
   local -r tt="Patches give partial support depending on your theme colour variant, as well as dark or light mode. It likely works anyway so you can give it a shot but only with $backup_nag"
 
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    ver=$(sw_vers -productVersion)
+    ver=$(sw_vers -buildVersion)
     gs=$(grep "$ver" COMPATIBILITY)
 
     if [ -z "$gs" ]; then
