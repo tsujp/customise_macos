@@ -9,7 +9,7 @@
 print_indented ()
 {
   cols=$(tput cols)
-  maxcol=$(("$cols" > 80 ? "$cols" : 80))
+  maxcol=$(($cols > 80 ? $cols : 80))
   printf ":: $1\n" | fold -s -w "$maxcol" | sed -e "2,$ s|^|   |g"
 }
 
