@@ -10,20 +10,21 @@ print_indented ()
 {
   cols=$(tput cols)
   maxcol=$(($cols > 80 ? $cols : 80))
-  printf ">>> $1\n" | fold -s -w "$maxcol" | sed -e "2,$ s|^|   |g"
+  printf ">> %s\n" "$1" | fold -s -w 80 | sed -e "2,$ s|^|>> |g"
 }
 
 main ()
 {
   local -r backup_nag="backups in-place beforehand of course. Consult the README for instructions on how to backup."
   local -r qt="Patches are currently in-progress for your release, hang in there! There's more (or at least some) to come!"
-  local -r tt="Patches give partial support depending on your theme colour variant, as well as dark or light mode. Worth giving a shot, with $backup_nag"
+  local -r tt="Patches give partial support depending on your theme colour variant, as well as dark or light mode. It likely works anyway so you can give it a shot but only with $backup_nag"
 
   if [[ "$OSTYPE" == "darwin"* ]]; then
     ver=$(sw_vers -productVersion)
     gs=$(grep "$ver" COMPATIBILITY)
+
     if [ -z "$gs" ]; then
-      print_indented "Your version is not supported. You can still try if you like, with $backup_nag"
+      print_indented "Your macOS version is not supported. You can still try if you like, with $backup_nag"
     else
       # this isn't DRY but Apple only includes Bash 3.2 due to licensing issues
       # meaning case-fallthrough is not available (bash 4.0 feature)
@@ -39,7 +40,7 @@ main ()
           print_indented "$tt"
         ;;
         *)
-          print_indented "Your version is completely supported! Do whatever you want, with $backup_nag"
+          print_indented "Your macOS version is supported! Do whatever you want, with $backup_nag"
         ;;
       esac
     fi
@@ -48,4 +49,5 @@ main ()
   fi
 }
 
+# entry
 main
