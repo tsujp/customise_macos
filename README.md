@@ -1,64 +1,58 @@
-# Custom macOS GUI
+# Customise macOS
 
-Patches for appearance `.car` bundles to change the macOS GUI.
+Utilities and tools for customising macOS, e.g. appearance or settings like key
+repeat rates, mouse sensitivity and more. The idea is things which are not easy
+or are downright impossible to do via System Preferences et. al. are provided
+here.
 
-## Current patches
 
--   Square GUI elements (windows, menus, etc)
+## Customisations
 
-```
-TODO: better before and after example
-```
 
-## Usage
+### Appearance
 
-1.  Some SIP settings require disabling so you can modify the appropriate files
-    -- _it's your choice whether or not you want to do this_ -- not doing so
-    means you cannot apply the changes required. **You have to reboot into
-    Recovery Mode to make changes to SIP**, [the steps are explained in this SE
-    answer](https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x) but summarised immediately below:
+#### Aqua Desktop
 
-    ```bash
+Patches for `.car` bundles to change appearance of windows, menus, etc.
+
+##### Features
+
+- Square corners for windows, menus etc.
+
+##### Installation
+
+1. Some SIP settings require disabling so you can modify the appropriate files
+-- _it's your choice whether or not you want to do this_ -- not doing so means
+you cannot apply the changes required. **You have to reboot into Recovery Mode
+to make changes to SIP**, [the steps are explained in this SE
+answer](https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x)
+but summarised immediately below:
+
+    ```shell
     csrutil enable --without debug --without fs
     ```
 
-2.  While there are backup `.car` files in this repo, please backup yours
-    locally just in-case. Here's an example of how to do so.
+2. While there are backup `.car` files in this repo, please backup yours
+locally just in-case. Here's an example of how to do so.
 
-    <a id="backup" />
-
-    ```bash
-    rsync -rI /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/ ~/Desktop/saResourcesBackup
+    ```shell
+    rsync -rI \
+        /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/ \
+        ~/Desktop/saResourcesBackup
     ```
 
-3.  Copy the appropriate (for your theme, light or dark) edited `.car` file into
-    `/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/`,
-    e.g. for `DarkAquaAppearance` you'd copy `DarkAquaAppearance/Edited/DarkAquaAppearance.car`.
+3. In the `Appearance` folder on this repo copy the appropriate (for your
+theme i.e. light or dark) edited `.car` file into
+`/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/`,
+e.g. for `DarkAquaAppearance` you'd copy
+`DarkAquaAppearance/Edited/DarkAquaAppearance.car`.
 
-## Compatibility
+##### Known Problems
 
-This file contains version numbers of confirmed working patches. The format is
-quite simple:
+- Firefox doesn't respect system appearance settings, this is a known
+  defect/bug of Firefox's on macOS.
 
--   It contains the macOS release number
--   If no additional grammar is present, full support is available
--   If a `~` is present: indicates partial support
--   If a `?` is present: indicates in progress work
 
-If your release isn't listed it has no verified support, you could try it anyway
-[as long as you do a backup first](#backup).
+### More...
 
-### Example
-
-```
-11.0 ~    <-- version 11.0 is partially supported
-11.0 ?    <-- version 11.0 support is in progress (and none exists currently as
-              there is no `~`)
-11.0 ?~   <-- in progress and partially supported currently
-11.0      <-- this means version 11.0 is completely supported
-```
-
-## NB
-
--   Firefox doesn't respect system appearance settings, this is a known
-    defect/bug on macOS.
+_...in development_

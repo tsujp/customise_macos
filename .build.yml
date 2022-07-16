@@ -1,0 +1,30 @@
+image: alpine/3.16
+sources:
+  - https://git.sr.ht/~tsujp/customise_macos
+secrets:
+  - d68a625f-3652-4549-8d70-ebe42b440f41
+tasks:
+  - mirror-to-github: |
+      mkdir -p ~/.ssh
+
+      cd customise_macos
+
+      # See https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/githubs-ssh-key-fingerprints
+      known_good='2048 SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8 github.com (RSA)'
+
+      keyscan_file=$(mktemp)
+
+      # Fetch host pubkey and save it to a file, we need it later.
+      ssh-keyscan -4 -T 5 -t rsa github.com | tee "$keyscan_file" 2> /dev/null
+
+      # Does computed fingerprint from host pubkey match our known good one?
+      if [[ "$(ssh-keygen -lf "$keyscan_file")" =~ "$known_good" ]]; then
+        cat "$keyscan_file" >> ~/.ssh/known_hosts
+      else
+        exit 1
+      fi
+
+      # TODO: contribute to `builds` and get repo names nicely passed into environment; for now leave hardcoded
+      git remote add github git@github.com:tsujp/customise_macos.git
+      git push --prune github :refs/heads/HEAD +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
+
