@@ -1,0 +1,59 @@
+So many frameworks
+
+(these are probably wrong as in grossly oversimplified)
+
+SwiftUI - "basically" a Swift layer on top of UIKit and AppKit
+    https://www.wwdcbysundell.com/2019/swiftui-relationship-to-uikit-appkit/
+
+
+
+UIKit
+    For graphical applications (games? et al)
+    https://developer.apple.com/documentation/uikit
+
+
+AppKit (formerly ApplicationKit). Cocoa contains { AppKit, Foundation Kit, Core Data }
+    Apart from SwiftUI, it is _the_ UI framework for GUI applications.
+    https://developer.apple.com/documentation/appkit/
+    https://en.wikipedia.org/wiki/Cocoa_(API)#cite_note-12
+    https://en.wikipedia.org/wiki/Core_Data
+
+
+
+https://en.wikipedia.org/wiki/Quartz_(graphics_layer)
+https://developer.apple.com/documentation/coregraphics
+https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html
+https://en.wikipedia.org/wiki/Core_Animation
+https://en.wikipedia.org/wiki/List_of_widget_toolkits#On_Macintosh
+https://en.wikipedia.org/wiki/Metal_(API)
+https://michelf.ca/blog/2007/d-objc-bridge/
+https://www.cocotron.org/
+https://code.google.com/archive/p/purefoundation/
+https://stackoverflow.com/questions/35106118/what-is-the-best-way-to-call-into-swift-from-c
+https://gist.github.com/HiImJulien/c79f07a8a619431b88ea33cca51de787
+https://www.amazon.com/exec/obidos/tg/detail/-/0201726831
+https://gist.github.com/FiloSottile/7125822
+https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master
+
+
+https://en.wikipedia.org/wiki/Aqua_(user_interface)
+
+
+http://www.gnustep.org/resources/OpenStepSpec/ApplicationKit/Classes/index.html
+https://en.wikipedia.org/wiki/Foundation_Kit
+https://github.com/rubycocoa/rubycocoa/tree/master/sample
+https://github.com/rubycocoa/rubycocoa/blob/master/doc/try-samples.md
+https://github.com/rubycocoa/rubycocoa/blob/master/sample/Hakoiri-Musume/Makefile
+https://developer.apple.com/library/archive/navigation/
+https://en.wikipedia.org/wiki/RubyCocoa
+http://cocoadevcentral.com/d/intro_to_quartz/
+http://cocoadevcentral.com/d/intro_to_quartz_two/
+https://web.archive.org/web/20040423020135/http://developer.apple.com/referencelibrary/GettingStarted/GS_GraphicsImaging/
+https://developer.apple.com/videos/play/wwdc2021/10054/
+
+
+
+https://en.wikipedia.org/wiki/Bundle_(macOS)
+https://www.maketecheasier.com/anatomy-macos-app-bundles/
+https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html#//apple_ref/doc/uid/10000123i-CH101-SW1
+https://stackoverflow.com/questions/1596945/building-osx-app-bundle
